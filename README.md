@@ -34,12 +34,16 @@ PORT=3000
 JWT_SECRET=thisissecret
 JWT_EXPIRATION_TIME='60m'
 
-# 4.Generate and run migrations
-# 4.1 To generate migrations, run the following command:
+# 4.Build app 
+# (This will let generate migration files)
+$ npm run build 
+
+# 5.Generate and run migrations
+# 5.1 To generate migrations, run the following command:
 
 $ npm run typeorm migration:generate ./migrations/initial-schema -- -o -d ./src/db.datasource.ts
 
-# 4.2 To create the necessary database tables, run the migration:
+# 5.2 To create the necessary database tables, run the migration:
 $ npm run typeorm migration:run -- -d ./src/db.datasource.ts
 ```
 
