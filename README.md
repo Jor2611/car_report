@@ -19,6 +19,8 @@ Used Car Price Estimation API with [Nest](https://github.com/nestjs/nest).
 
 ## Installation
 
+### Local
+
 ```bash
 # 1.Clone the repository
 $ git clone <repository_url>
@@ -46,6 +48,12 @@ $ npm run typeorm migration:generate ./migrations/initial-schema -- -o -d ./src/
 # 5.2 To create the necessary database tables, run the migration:
 $ npm run typeorm migration:run -- -d ./src/db.datasource.ts
 ```
+
+### Docker
+```bash
+docker run --rm -it --name=car-report-app -p 3000:3000 jorakhachatryan/car_report_app
+```
+attach ```sh``` at the end, to run commands inside the container manually.
 
 ## Test
 

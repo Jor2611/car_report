@@ -64,9 +64,6 @@ export class AccountService {
     return account;
   }
 
-  // findByFilter(filter: Partial<Account>){
-  //   return this.accountRepo.find({ where: instanceToPlain(filter) })
-  // }
 
   async update(id: number, attrs: Partial<Account>){
     const account = await this.accountRepo.findOne({ where: { id } });
